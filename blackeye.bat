@@ -151,7 +151,7 @@ rem Option Menu
 		) else if "%sel%"=="39" (
 			echo.
 			echo 					Not available yet!
-			echo 		Will be available in version 2.0 and later. Current version is %ver%.
+			echo 		Will be available in version 2.0.0 and later. Current version is %ver%.
 			echo.
 			call :update
 			exit /b 0
