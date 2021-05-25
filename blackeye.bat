@@ -65,7 +65,7 @@ exit /b 0
 rem Option Menu
 :menu
 	echo.
-	echo 				   BLACKEYE FOR WINDOWS By @HiDe
+	echo 				BLACKEYE FOR WINDOWS By @HiDe-Techno-Tips
 	echo.
 	echo							MENU
 	echo. & echo.
