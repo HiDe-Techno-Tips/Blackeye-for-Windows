@@ -7,7 +7,7 @@ set php="%CD%\php\php.exe"
 set ngrok="%CD%\ngrok.exe"
 set jq="%CD%\jq.exe"
 
-set mylink="https://github.com/hide/"
+set mylink="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases"
 
 :main
 		call :checkbin
