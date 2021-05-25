@@ -10,7 +10,9 @@
 This is a Phishing tool. Phishing is a type of hacking also called credential harvesting. It creates fake websites for victims to login which saves their login info which includes IP, User-Agent, Username and Password to a file in the computer running Blackeye. This tool has been there for [Linux](https://www.linux.org/) and even [Android](https://www.android.com/) via [Termux](https://termux.com/). I converted it to [Windows](https://www.microsoft.com/en-in/windows).
 
   ### These are the options:
-  ![See the Options](https://user-images.githubusercontent.com/61367380/119489210-166f0880-bd79-11eb-9e04-f5112ca3fcde.png)
+</p aligh="center">
+![See the Options](https://user-images.githubusercontent.com/61367380/119489210-166f0880-bd79-11eb-9e04-f5112ca3fcde.png)
+</p>
 
 ## Legal disclaimer:
 Usage of BlackEye for attacking targets without prior mutual consent is illegal. It's the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program. Only use for educational purposes.
