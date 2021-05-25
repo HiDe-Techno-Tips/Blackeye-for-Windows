@@ -1,6 +1,6 @@
 @echo off
 
-set ver=1.0
+set ver=1.0.1
 title Blackeye for Windows %ver%
 
 set php="%CD%\php\php.exe"
