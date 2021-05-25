@@ -11,7 +11,7 @@ This is a Phishing tool. Phishing is a type of hacking also called credential ha
 
   ### These are the options:
 </p aligh="center">
-![See the Options](https://user-images.githubusercontent.com/61367380/119489210-166f0880-bd79-11eb-9e04-f5112ca3fcde.png)
+<img src="https://user-images.githubusercontent.com/61367380/119489210-166f0880-bd79-11eb-9e04-f5112ca3fcde.png">
 </p>
 
 ## Legal disclaimer:
