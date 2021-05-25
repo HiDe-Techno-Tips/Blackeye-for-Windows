@@ -1,7 +1,7 @@
 # Blackeye-for-Windows v1.0.1
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61367380/119512194-bab07980-bd90-11eb-9e4a-78da47480b8b.gif" height="170"> <a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/archive/refs/heads/main.zip"> <img src="https://user-images.githubusercontent.com/61367380/119500767-c8143680-bd85-11eb-802d-4c5b750c349a.png" height="170"> </a>
+<img src="https://user-images.githubusercontent.com/61367380/119512194-bab07980-bd90-11eb-9e4a-78da47480b8b.gif" height="150"> <a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/archive/refs/heads/main.zip"> <img src="https://user-images.githubusercontent.com/61367380/119500767-c8143680-bd85-11eb-802d-4c5b750c349a.png" height="150"> </a>
 </p>
   
 This is a Phishing tool. Phishing is a type of hacking also called credential harvesting. It creates fake websites for victims to login which saves their login info which includes IP, User-Agent, Username and Password to a file in the computer running Blackeye. This tool has been there for [Linux](https://www.linux.org/) and even [Android](https://www.android.com/) via [Termux](https://termux.com/). I converted it to [Windows](https://www.microsoft.com/en-in/windows).
