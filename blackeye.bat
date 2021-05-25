@@ -10,9 +10,11 @@ set jq="%CD%\jq.exe"
 set mylink="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases"
 
 :main
-		call :checkbin
-		echo. & echo. & echo.
-		call :banner
+	call :checkbin
+	echo. & echo. & echo.
+	call :banner
+	cls
+	call :authngrok
 	:dowhile1
 		cls
 		call :menu
@@ -51,7 +53,7 @@ exit /b 0
 		tar -xf %ngrok%.zip -C %ngrok%\..
 		del %ngrok%.zip
 	)
-	if exist %ngrok% ngrok -v
+	if exist %ngrok% %ngrok% -v
 
 	if not exist %jq% (
 		echo.
@@ -60,6 +62,26 @@ exit /b 0
 		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -LJ https://github.com/stedolan/jq/releases/download/jq-1.6/jq-win64.exe -o %jq%
 		if %PROCESSOR_ARCHITECTURE%==x86 curl -LJ https://github.com/stedolan/jq/releases/download/jq-1.6/jq-win32.exe -o %jq%
 	)
+exit /b 0
+
+:authngrok
+	setlocal enableextensions enabledelayedexpansion
+	if not exist %userprofile%\.ngrok2\ngrok.yml (
+	echo.
+	echo Authenticate ngrok! READ CAREFULLY:
+	echo.
+	echo This will open ngrok website. Login or Create a free account.
+	echo Then you will find your authtoken there. Copy that authtoken.
+	echo Press Enter if you are ready.
+	pause >nul
+	echo.
+
+	start "" https://dashboard.ngrok.com/get-started/your-authtoken
+
+	set /p authtoken="Paste or Enter your ngrok authtoken: "
+	%ngrok% authtoken !authtoken!
+	)
+	endlocal
 exit /b 0
 
 rem Option Menu
