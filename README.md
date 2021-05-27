@@ -52,6 +52,6 @@ Usage of BlackEye for attacking targets without prior mutual consent is illegal.
     <p>&nbsp;</p>
   * [stedolan](https://github.com/jq)
     * Created [jq](https://github.com/stedolan/jq).
-## Softwares used:
+## Other Softwares used by Blackeye for Windows:
 * [PHP](https://www.php.net/)
 * [ngrok](https://ngrok.com/)
