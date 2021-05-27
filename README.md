@@ -54,4 +54,4 @@ Usage of BlackEye for attacking targets without prior mutual consent is illegal.
     * Created [jq](https://github.com/stedolan/jq).
 ## Other Softwares used by Blackeye for Windows:
 * [PHP](https://www.php.net/) used to publish phishing pages to localhost.
-* [ngrok](https://ngrok.com/) used to tunnel localhost to internet. 
+* [ngrok](https://ngrok.com/) used to tunnel localhost to the Internet. 
