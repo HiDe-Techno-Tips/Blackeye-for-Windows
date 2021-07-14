@@ -1,6 +1,8 @@
 @echo off
 
-set ver=v1.1.0
+cls
+del ext.bat >nul 2>&1
+set ver=v1.1.1
 title Blackeye for Windows %ver%
 
 set php="%CD%\php\php.exe"
@@ -156,12 +158,10 @@ rem Option Menu
 			echo 		Will be available in version 2.0.0 and later. Current version is %ver%.
 			echo.
 			call :update
-			start /b "" "%CD%\blackeye.bat"
-			exit /b 1
+			exit /b 0
 		) else if "%sel%"=="40" (
 			call :update
-			start /b "" "%CD%\blackeye.bat"
-			exit /b 1
+			exit /b 0
 		) else if "%sel%"=="" ( exit /b 1
 		) else ( echo Wrong Choice! Try Again
 			timeout /t 2 >nul
@@ -170,36 +170,55 @@ rem Option Menu
 exit /b 0
 
 :update
+	echo.
 	echo Check for updates ^(y/n^)^?
 	choice /cs /c yYnN >nul
-	set u=%ERRORLEVEL%
+	set u=%errorlevel%
 	set res=0
-	if "%u%"=="1" set res=1
-	if "%u%"=="2" set res=1
-	if "%res%"=="1" (
-		for /f %%g in ('curl -s https://api.github.com/repos/HiDe-Techno-Tips/Blackeye-for-windows/releases/latest ^| jq .tag_name') do (set lver=%%g)
-		if %ver%==%lver% (
-			echo You have the Latest version.
-			timeout /t 2 >nul
-		)
-		if not %ver%==%lver% (
-			echo Download %lver% ^(y/n^)^?
-			choice /cs /c yYnN >nul
-			set u=%ERRORLEVEL%
-			set res=0
-			if "%u%"=="1" set res=1
-			if "%u%"=="2" set res=1
-			if "%res%"=="1" (
-				echo.
-				echo Downloading Blackeye for Windows %lver%
-				echo.
-				curl -LJ https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip -o blackeye.zip
-				tar -xf blackeye.zip -C %CD%
-				del Blackeye.zip
-			)
-		)
+	if %u%==1 set res=1
+	if %u%==2 set res=1
+	if %res%==1 (call :cdownload)
+exit /b 0
+
+:cdownload
+	cls
+	del blackeye.json >nul 2>&1
+	curl -s https://api.github.com/repos/HiDe-Techno-Tips/Blackeye-for-windows/releases/latest > blackeye.json
+	for /f %%g in ('type blackeye.json ^| jq .tag_name') do (set lver=%%g)
+	del blackeye.json >nul 2>&1
+	if "%ver%"==%lver% (
+		echo You have the Latest version.
+		timeout /t 2 >nul
+	) else (
+		call :download
 	)
 exit /b 0
+
+:download
+	echo Download %lver% ^(y/n^)^?
+	choice /cs /c yYnN >nul
+	set u=%errorlevel%
+	set res=0
+	if %u%==1 set res=1
+	if %u%==2 set res=1
+	if %res%==1 (
+		echo.
+		echo Downloading Blackeye for Windows %lver%
+		echo.
+		del blackeye.zip
+		curl -LJ https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip -o blackeye.zip
+		goto :extract
+	)
+exit /b 0
+
+:extract
+	echo @echo off >ext.bat
+	echo tar -xf blackeye.zip -C "%%CD%%" >>ext.bat
+	echo del Blackeye.zip ^>nul 2^>^&1 >>ext.bat
+	echo start "" blackeye.bat >>ext.bat
+	echo exit >>ext.bat
+	start "" ext.bat
+exit
 
 :checkdirectory
 	if "%~dp0"=="%CD%\" exit /b 0
