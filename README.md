@@ -1,4 +1,4 @@
-<h1 id="blackeye-for-windows-v1-0-1">Blackeye-for-Windows v1.1.2</h1>
+<h1 id="blackeye-for-windows-v1-0-1">Blackeye-for-Windows</h1>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61367380/119512194-bab07980-bd90-11eb-9e4a-78da47480b8b.gif" width="300">
 </p>
