@@ -2,7 +2,7 @@
 
 cls
 del ext.bat >nul 2>&1
-set ver=v1.1.1
+set ver=v1.1.2
 title Blackeye for Windows %ver%
 
 set php="%CD%\php\php.exe"
@@ -32,8 +32,8 @@ exit /b 0
 		echo.
 		echo Downloading php
 		echo.
-		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -LJ https://windows.php.net/downloads/releases/php-8.0.6-nts-Win32-vs16-x64.zip -o %php%.zip
-		if %PROCESSOR_ARCHITECTURE%==x86 curl -LJ https://windows.php.net/downloads/releases/php-8.0.6-nts-Win32-vs16-x86.zip -o %php%.zip
+		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -LJ https://windows.php.net/downloads/releases/php-8.0.9-nts-Win32-vs16-x64.zip -o %php%.zip
+		if %PROCESSOR_ARCHITECTURE%==x86 curl -LJ https://windows.php.net/downloads/releases/php-8.0.9-nts-Win32-vs16-x86.zip -o %php%.zip
 
 		tar -xf %php%.zip -C %php%\..
 		del %php%.zip
