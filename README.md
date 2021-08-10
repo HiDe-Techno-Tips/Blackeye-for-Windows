@@ -32,7 +32,7 @@ blackeye.bat
 </code></pre></li>
 </ul>
 </li>
-<h3>If you are having any problem, do make an issue by <a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/issues/new">clicking here</a>.</h3>
+<h3>If you are having any problem, feel free to ask me about the problem by <a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/issues/new">clicking here</a>.</h3>
 </ul>
 <h2 id="special-thanks-to-">Special Thanks to:</h2>
 <ul>
