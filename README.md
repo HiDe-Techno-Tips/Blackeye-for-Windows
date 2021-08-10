@@ -16,10 +16,10 @@
 <p>Usage of BlackEye for attacking targets without prior mutual consent is illegal. It&#39;s the end user&#39;s responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program. Only use for educational purposes.</p>
 <h2 id="how-to-use-">How to use:</h2>
 <ul>
-<li><p>Just download <a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/archive/refs/heads/main.zip">this</a> and extract it. Run blackeye.bat from the extracted folder and it will guide you through everything. Just read everything carefully while running it.</p>
+<li><p>Just download <a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip">this</a> and extract it. Run blackeye.bat from the extracted folder and it will guide you through everything. Just read everything carefully while running it.</p>
 <ul>
 <li><p>Or using Curl (Bundled with Windows 10 1803):</p>
-<pre><code>curl -LJ https:<span class="hljs-comment">//github.com/HiDe-Techno-Tips/Blackeye-for-Windows/archive/refs/heads/main.zip -o blackeye.zip</span>
+<pre><code>curl -LJ https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip -o blackeye.zip</span>
 tar -xf blackeye<span class="hljs-selector-class">.zip</span>
 <span class="hljs-selector-tag">del</span> blackeye<span class="hljs-selector-class">.zip</span>
 cd Blackeye-<span class="hljs-keyword">for</span>-Windows-main
