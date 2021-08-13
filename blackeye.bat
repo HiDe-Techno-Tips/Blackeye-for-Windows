@@ -2,7 +2,7 @@
 
 cls
 del ext.bat >nul 2>&1
-set ver=v1.1.2
+set ver=v1.1.3
 title Blackeye for Windows %ver%
 
 set php="%CD%\php\php.exe"
