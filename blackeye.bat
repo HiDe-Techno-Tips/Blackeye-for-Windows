@@ -213,7 +213,7 @@ exit /b 0
 
 :extract
 	echo @echo off >ext.bat
-	echo 7za.exe x -o"%%CD%%" blackeye.zip >>ext.bat
+	echo 7za.exe x -y -o"%%CD%%" blackeye.zip >>ext.bat
 	echo del Blackeye.zip ^>nul 2^>^&1 >>ext.bat
 	echo start "" blackeye.bat >>ext.bat
 	echo exit >>ext.bat
