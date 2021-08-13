@@ -2,7 +2,7 @@
 
 cls
 del ext.bat >nul 2>&1
-set ver=v1.1.3
+set ver=v1.1.4
 title Blackeye for Windows %ver%
 
 set php="%CD%\php\php.exe"
@@ -35,7 +35,7 @@ exit /b 0
 		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -k -LJ https://windows.php.net/downloads/releases/php-8.0.9-nts-Win32-vs16-x64.zip -o %php%.zip
 		if %PROCESSOR_ARCHITECTURE%==x86 curl -k -LJ https://windows.php.net/downloads/releases/php-8.0.9-nts-Win32-vs16-x86.zip -o %php%.zip
 
-		tar -xf %php%.zip -C %php%\..
+		7za.exe x -y -o%php%\.. %php%.zip
 		del %php%.zip
 	)
 	echo.
@@ -50,7 +50,7 @@ exit /b 0
 		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -k -LJ https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -o %ngrok%.zip
 		if %PROCESSOR_ARCHITECTURE%==x86 curl -k -LJ https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-386.zip -o %ngrok%.zip
 
-		tar -xf %ngrok%.zip -C %ngrok%\..
+		7za.exe x -y -o%ngrok%\.. %ngrok%.zip
 		del %ngrok%.zip
 	)
 	echo.
@@ -61,7 +61,7 @@ exit /b 0
 		echo Downloading jq
 		echo.
 		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -k -LJ https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe -o %jq%
-		if %PROCESSOR_ARCHITECTURE%==x86 https://github.com/stedolan/jq/releases/latest/download/jq-win32.exe -o %jq%
+		if %PROCESSOR_ARCHITECTURE%==x86 curl -k -LJ https://github.com/stedolan/jq/releases/latest/download/jq-win32.exe -o %jq%
 	)
 	echo.
 	if exist %jq% %jq% --version
@@ -213,7 +213,7 @@ exit /b 0
 
 :extract
 	echo @echo off >ext.bat
-	echo tar -xf blackeye.zip -C "%%CD%%" >>ext.bat
+	echo 7za.exe x -o"%%CD%%" blackeye.zip >>ext.bat
 	echo del Blackeye.zip ^>nul 2^>^&1 >>ext.bat
 	echo start "" blackeye.bat >>ext.bat
 	echo exit >>ext.bat
