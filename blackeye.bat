@@ -32,8 +32,8 @@ exit /b 0
 		echo.
 		echo Downloading php
 		echo.
-		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -LJ https://windows.php.net/downloads/releases/php-8.0.9-nts-Win32-vs16-x64.zip -o %php%.zip
-		if %PROCESSOR_ARCHITECTURE%==x86 curl -LJ https://windows.php.net/downloads/releases/php-8.0.9-nts-Win32-vs16-x86.zip -o %php%.zip
+		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -k -LJ https://windows.php.net/downloads/releases/php-8.0.9-nts-Win32-vs16-x64.zip -o %php%.zip
+		if %PROCESSOR_ARCHITECTURE%==x86 curl -k -LJ https://windows.php.net/downloads/releases/php-8.0.9-nts-Win32-vs16-x86.zip -o %php%.zip
 
 		tar -xf %php%.zip -C %php%\..
 		del %php%.zip
@@ -47,8 +47,8 @@ exit /b 0
 		echo.
 		echo Downloading ngrok
 		echo.
-		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -LJ https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -o %ngrok%.zip
-		if %PROCESSOR_ARCHITECTURE%==x86 curl -LJ https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-386.zip -o %ngrok%.zip
+		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -k -LJ https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -o %ngrok%.zip
+		if %PROCESSOR_ARCHITECTURE%==x86 curl -k -LJ https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-386.zip -o %ngrok%.zip
 
 		tar -xf %ngrok%.zip -C %ngrok%\..
 		del %ngrok%.zip
@@ -60,7 +60,7 @@ exit /b 0
 		echo.
 		echo Downloading jq
 		echo.
-		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -LJ https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe -o %jq%
+		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -k -LJ https://github.com/stedolan/jq/releases/latest/download/jq-win64.exe -o %jq%
 		if %PROCESSOR_ARCHITECTURE%==x86 https://github.com/stedolan/jq/releases/latest/download/jq-win32.exe -o %jq%
 	)
 	echo.
@@ -183,7 +183,7 @@ exit /b 0
 :cdownload
 	cls
 	del blackeye.json >nul 2>&1
-	curl -s https://api.github.com/repos/HiDe-Techno-Tips/Blackeye-for-windows/releases/latest > blackeye.json
+	curl -k -s https://api.github.com/repos/HiDe-Techno-Tips/Blackeye-for-windows/releases/latest > blackeye.json
 	for /f %%g in ('type blackeye.json ^| jq .tag_name') do (set lver=%%g)
 	del blackeye.json >nul 2>&1
 	if "%ver%"==%lver% (
@@ -206,7 +206,7 @@ exit /b 0
 		echo Downloading Blackeye for Windows %lver%
 		echo.
 		del blackeye.zip
-		curl -LJ https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip -o blackeye.zip
+		curl -k -LJ https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip -o blackeye.zip
 		goto :extract
 	)
 exit /b 0
@@ -390,7 +390,7 @@ exit /b 0
 	echo							Starting %server% Server...
 	echo.
 	timeout /t 5 /nobreak >nul
-	for /f %%l in ('curl --silent http://127.0.0.1:4040/api/tunnels ^| %jq% .tunnels[1].public_url') do set link=%%l
+	for /f %%l in ('curl -k --silent http://127.0.0.1:4040/api/tunnels ^| %jq% .tunnels[1].public_url') do set link=%%l
 	start "" http://localhost:4040
 	call :checkfound
 exit /b 0
