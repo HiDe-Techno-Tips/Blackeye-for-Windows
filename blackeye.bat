@@ -32,8 +32,8 @@ exit /b 0
 		echo.
 		echo Downloading php
 		echo.
-		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -k -LJ https://windows.php.net/downloads/releases/php-8.0.9-nts-Win32-vs16-x64.zip -o %php%.zip
-		if %PROCESSOR_ARCHITECTURE%==x86 curl -k -LJ https://windows.php.net/downloads/releases/php-8.0.9-nts-Win32-vs16-x86.zip -o %php%.zip
+		if %PROCESSOR_ARCHITECTURE%==AMD64 curl -k -LJ https://windows.php.net/downloads/releases/archives/php-8.0.9-nts-Win32-vs16-x64.zip -o %php%.zip
+		if %PROCESSOR_ARCHITECTURE%==x86 curl -k -LJ https://windows.php.net/downloads/releases/archives/php-8.0.9-nts-Win32-vs16-x86.zip -o %php%.zip
 
 		7za.exe x -y -o%php%\.. %php%.zip
 		del %php%.zip
