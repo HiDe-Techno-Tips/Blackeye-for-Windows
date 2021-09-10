@@ -14,6 +14,9 @@
 
 <h2 id="legal-disclaimer-">Legal disclaimer:</h2>
 <p>Usage of BlackEye for attacking targets without prior mutual consent is illegal. It&#39;s the end user&#39;s responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program. Only use for educational purposes.</p>
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/HimDek?locale.x=en_GB)
+
 <h2 id="how-to-use-">How to use:</h2>
 <ul>
 <li><p>Just download <a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip">this</a> and extract it. Run blackeye.bat from the extracted folder and it will guide you through everything. Just read everything carefully while running it.</p>
