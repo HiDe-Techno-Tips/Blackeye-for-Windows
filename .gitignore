@@ -1,3 +1,6 @@
+.vs
+.vscode
 php
 jq.exe
 ngrok.exe
+*.zip
