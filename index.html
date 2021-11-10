@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+<title>HiDe Techno Tips</title>
+<div id = "head"></div>
+</head>
+<script>
+	fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/head.txt").then(function(response) {
+    	response.text().then(function(text) {
+    		document.getElementById("head").innerHTML = text;
+    	});
+  	});
+</script>
+
+<body>
+<header>
+<script src="https://apis.google.com/js/platform.js"></script>
+<div id = "header"></div>
+</header>
+<script>
+		fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/header.txt").then(function(response) {
+    		response.text().then(function(text) {
+    			document.getElementById("header").innerHTML = text;
+    		});
+  		});
+</script>
+
+<div id = "tabdiv" class = "tab" style = "z-index:1"></div>
+<script>
+		fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/tab.txt").then(function(response) {
+    		response.text().then(function(text) {
+    			document.getElementById("tabdiv").innerHTML = text;
+    		});
+  		});
+</script>
+
+<div id = "content"></div>
+<script>
+		fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/Blackeye-for-Windows/main/README.md").then(function(response) {
+    		response.text().then(function(text) {
+    			document.getElementById("content").innerHTML = text;
+    		});
+  		});
+</script>
+
+<footer id = "footer"></footer>
+<script>
+		fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/footer.txt").then(function(response) {
+    		response.text().then(function(text) {
+    			document.getElementById("footer").innerHTML = text;
+    		});
+  		});
+</script>
+</body>
+</html>
