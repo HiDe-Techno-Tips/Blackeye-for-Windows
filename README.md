@@ -3,7 +3,7 @@
 <img src="https://user-images.githubusercontent.com/61367380/119512194-bab07980-bd90-11eb-9e4a-78da47480b8b.gif" width="300">
 </p>
 <p align="center">
-<a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip"> <img src="https://user-images.githubusercontent.com/61367380/119500767-c8143680-bd85-11eb-802d-4c5b750c349a.png" width="450"> </a>
+<a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip"> <img class="button" src="https://user-images.githubusercontent.com/61367380/119500767-c8143680-bd85-11eb-802d-4c5b750c349a.png" width="450"> </a>
 </p>
 
 <h1 id="What-is-This">What is this?</h2>
