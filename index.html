@@ -43,6 +43,32 @@
 		}
 	}
 </script>
+<script>
+	count = 0;
+	for (let i = 0; ; i++) {
+		if (out[i] == null) {
+			break;
+		}
+		if (out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() || out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() + ".github.io") {
+                    	continue;
+		}
+		count++;
+	}
+	document.getElementById("projects").innerHTML = document.getElementById("projects").innerHTML + " <span>" + count + "</span>"
+</script>
+<script>
+	fetch("https://api.github.com/users/Hide-techno-tips/gists").then(res => res.json()).then((out) => {
+		count = 0;
+            	divtxt = "";
+            	for (let i = 0; ; i++) {
+               		if (out[i] == null || Object.keys(out[i].files)[0] == null) {
+                   		break;
+                   	}
+               		count++;
+		}
+		document.getElementById("gists").innerHTML = document.getElementById("gists").innerHTML + " <span>" + count + "</span>";
+	})
+</script>
 
 <div id = "content"></div>
 <script>
