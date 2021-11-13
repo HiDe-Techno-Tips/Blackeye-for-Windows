@@ -25,11 +25,11 @@
   		});
 </script>
 
-<div id = "tabdiv" class = "tab" style = "z-index:1"></div>
+<div id = "tabbar" class = "tab" style = "z-index:1"></div>
 <script>
 		fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/tab.txt").then(function(response) {
     		response.text().then(function(text) {
-    			document.getElementById("tabdiv").innerHTML = text;
+    			document.getElementById("tabbar").innerHTML = text;
     		});
   		});
 </script>
