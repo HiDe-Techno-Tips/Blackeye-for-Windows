@@ -49,15 +49,15 @@ blackeye.bat
 <li>PayPal, eBay, CryptoCurrency, Verizon, DropBox, Adobe ID, Shopify, Messenger, Twitch, Myspace, Badoo, VK, Yandex and DevianART Phishing Pages.<p>&nbsp;</p></li>
 </ul>
 </li>
-<li><a href="https://github.com/An0nUD4Y">An0nUD4Y</a><ul>
+<li><a href="https://github.com/An0nUD4Y">@An0nUD4Y</a><ul>
 <li>Instagram Phishing Page.<p>&nbsp;</p></li>
 </ul>
 </li>
-<li><a href="https://github.com/UndeadSec">UndeadSec</a><ul>
+<li><a href="https://github.com/UndeadSec">@UndeadSec</a><ul>
 <li>Facebook, Google, SnapChat, Twitter and Microsoft Phishing Pages from <a href="https://github.com/UndeadSec/SocialFish">SocialFish</a>.<p>&nbsp;</p></li>
 </ul>
 </li>
-<li><a href="https://github.com/jq">stedolan</a><ul>
+<li><a href="https://github.com/stedolan">@stedolan</a><ul>
 <li>Created <a href="https://github.com/stedolan/jq">jq</a>.<h2 id="other-softwares-used-by-blackeye-for-windows-">Other Softwares used by Blackeye for Windows:</h2>
 </li>
 <li><a href="https://www.php.net/">PHP</a> used to publish phishing pages to localhost.</li>
