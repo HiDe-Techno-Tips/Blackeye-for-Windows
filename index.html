@@ -44,17 +44,19 @@
 	}
 </script>
 <script>
-	count = 0;
-	for (let i = 0; ; i++) {
-		if (out[i] == null) {
-			break;
+	fetch("https://api.github.com/users/Hide-techno-tips/repos").then(res => res.json()).then((out) => {
+		count = 0;
+		for (let i = 0; ; i++) {
+			if (out[i] == null) {
+				break;
+			}
+			if (out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() || out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() + ".github.io") {
+    	                	continue;
+			}
+			count++;
 		}
-		if (out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() || out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() + ".github.io") {
-                    	continue;
-		}
-		count++;
-	}
-	document.getElementById("projects").innerHTML = document.getElementById("projects").innerHTML + " <span>" + count + "</span>"
+		document.getElementById("projects").innerHTML = document.getElementById("projects").innerHTML + " <span>" + count + "</span>"
+	})
 </script>
 <script>
 	fetch("https://api.github.com/users/Hide-techno-tips/gists").then(res => res.json()).then((out) => {
