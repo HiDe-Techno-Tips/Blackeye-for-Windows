@@ -4,11 +4,11 @@
 <div id = "head"></div>
 </head>
 <script>
-	fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/head.txt").then(function(response) {
+fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/head.txt").then(function(response) {
     	response.text().then(function(text) {
-    		document.getElementById("head").innerHTML = text;
+		document.getElementById("head").innerHTML = text;
     	});
-  	});
+});
 </script>
 
 <body>
@@ -18,78 +18,79 @@
 <div class="g-ytsubscribe" data-channelid="UCy3fBVKd0RMY05CgiiuGqSA" data-layout="" data-count="default"></div>
 </header>
 <script>
-		fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/header.txt").then(function(response) {
-    		response.text().then(function(text) {
-    			document.getElementById("header").innerHTML = text;
-    		});
-  		});
+fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/header.txt").then(function(response) {
+    	response.text().then(function(text) {
+    		document.getElementById("header").innerHTML = text;
+    	});
+});
 </script>
 
 <div id = "tabbar" class = "tab" style = "z-index:1"></div>
 <script>
-		fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/tab.txt").then(function(response) {
-    		response.text().then(function(text) {
-    			document.getElementById("tabbar").innerHTML = text;
-    		});
-  		});
+fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/tab.txt").then(function(response) {
+    	response.text().then(function(text) {
+    		document.getElementById("tabbar").innerHTML = text;
+    	});
+});
 </script>
 <script>
-	function Menu(icon) {
-		var x = document.getElementById("tabbar");
-		if (x.className === "tab") {
-			x.className += " responsive";
-		} else {
-			x.className = "tab";
-		}
+function Menu(icon) {
+	var x = document.getElementById("tabbar");
+	if (x.className === "tab") {
+		x.className += " responsive";
+	} else {
+		x.className = "tab";
 	}
+}
 </script>
 <script>
-	fetch("https://api.github.com/users/Hide-techno-tips/repos").then(res => res.json()).then((out) => {
-		count = 0;
-		for (let i = 0; ; i++) {
-			if (out[i] == null) {
-				break;
-			}
-			if (out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() || out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() + ".github.io") {
-    	                	continue;
-			}
-			count++;
+fetch("https://api.github.com/users/Hide-techno-tips/repos").then(res => res.json()).then((out) => {
+	count = 0;
+	for (let i = 0; ; i++) {
+		if (out[i] == null) {
+			break;
 		}
-		document.getElementById("projects").innerHTML = document.getElementById("projects").innerHTML + " <span>" + count + "</span>"
-	})
+		if (out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() || out[i].name.toLowerCase() == out[i].owner.login.toLowerCase() + ".github.io") {
+			continue;
+		}
+		count++;
+	}
+	document.getElementById("projects").innerHTML = document.getElementById("projects").innerHTML + " <span>" + count + "</span>"
+})
 </script>
 <script>
-	fetch("https://api.github.com/users/Hide-techno-tips/gists").then(res => res.json()).then((out) => {
-		count = 0;
-            	divtxt = "";
-            	for (let i = 0; ; i++) {
-               		if (out[i] == null || Object.keys(out[i].files)[0] == null) {
-                   		break;
-                   	}
-               		count++;
+fetch("https://api.github.com/users/Hide-techno-tips/gists").then(res => res.json()).then((out) => {
+	count = 0;
+	divtxt = "";
+	for (let i = 0; ; i++) {
+		if (out[i] == null || Object.keys(out[i].files)[0] == null) {
+			break;
 		}
-		document.getElementById("gists").innerHTML = document.getElementById("gists").innerHTML + " <span>" + count + "</span>";
-	})
+		count++;
+	}
+	document.getElementById("gists").innerHTML = document.getElementById("gists").innerHTML + " <span>" + count + "</span>";
+})
 </script>
 
 <div id = "content"></div>
 <script>
-		fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/Blackeye-for-Windows/main/README.md").then(function(response) {
-    		response.text().then(function(text) {
-    			document.getElementById("content").innerHTML = text;
-    		});
-  		});
+fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/Blackeye-for-Windows/main/README.md").then(function(response) {
+    	response.text().then(function(text) {
+    		document.getElementById("content").innerHTML = text;
+    	});
+});
+document.getElementById("viewrepo").innerHTML = "<a href=\"https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows\"><button>View its Repository and Source Code in Github</button></a>"
 </script>
 
 <footer>
 <div id = "footer"></div>
 </footer>
 <script>
-		fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/footer.txt").then(function(response) {
-    		response.text().then(function(text) {
-    			document.getElementById("footer").innerHTML = text;
-    		});
-  		});
+fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/footer.txt").then(function(response) {
+    	response.text().then(function(text) {
+    		document.getElementById("footer").innerHTML = text;
+    	});
+});
 </script>
 </body>
 </html>
