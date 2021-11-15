@@ -1,4 +1,5 @@
-<a class="nodeclink" href="https://hide-techno-tips.github.io/Blackeye-for-Windows"><h1 id="blackeye-for-windows" align="center">Blackeye for Windows</h1></a>
+<h1 id="blackeye-for-windows" align="center">Blackeye for Windows</h1>
+<a class="invisible" href="https://hide-techno-tips.github.io/Blackeye-for-Windows"><p align="center">View in Website</p></a>
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61367380/119512194-bab07980-bd90-11eb-9e4a-78da47480b8b.gif" style="max-width: 300px; width: 100%;">
 </p>
