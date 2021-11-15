@@ -1,7 +1,7 @@
 <h1 id="blackeye-for-windows">Blackeye for Windows</h1>
 <div id="viewrepo"></div>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61367380/119512194-bab07980-bd90-11eb-9e4a-78da47480b8b.gif" style="width: auto; max-width:300px;">
+<img src="https://user-images.githubusercontent.com/61367380/119512194-bab07980-bd90-11eb-9e4a-78da47480b8b.gif" style="width: 100%; max-width:300px;">
 </p>
 <p align="center">
 <a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip"> <img class="button" src="https://user-images.githubusercontent.com/61367380/119500767-c8143680-bd85-11eb-802d-4c5b750c349a.png" style="width: 85%; max-width: 450px;"> </a>
