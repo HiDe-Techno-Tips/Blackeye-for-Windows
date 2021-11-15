@@ -87,6 +87,17 @@ fetch("https://api.github.com/users/Hide-techno-tips/repos").then(res => res.jso
 	document.getElementById("projects").innerHTML = document.getElementById("projects").innerHTML + " <span>" + count + "</span>"
 })
 </script>
+<div class="controls" style="margin: 20px 10px;">
+	<span class="buttons">
+		<a href="https://github.com/hide-techno-tips/blackeye-for-windows/issues"><button>Bugs and Issues</button></a>
+		<a href="https://github.com/hide-techno-tips/blackeye-for-windows/issues"><button>Pull Requests</button></a>
+	</span>
+	<span class="horizontalspace"></span>
+	<span class="buttons">
+		<a href="https://github.com/hide-techno-tips/blackeye-for-windows/issues/new"><button>Report a Bug or Issue</button></a>
+		<a href="https://github.com/hide-techno-tips/blackeye-for-windows/issues/new"><button>Create a Pull Request</button></a>
+	</span>
+</div>
 <script>
 fetch("https://api.github.com/users/Hide-techno-tips/gists").then(res => res.json()).then((out) => {
 	count = 0;
