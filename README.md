@@ -1,24 +1,24 @@
 <h1 id="blackeye-for-windows">Blackeye for Windows</h1>
 <div id="viewrepo"></div>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61367380/119512194-bab07980-bd90-11eb-9e4a-78da47480b8b.gif" width="300">
+<img src="https://user-images.githubusercontent.com/61367380/119512194-bab07980-bd90-11eb-9e4a-78da47480b8b.gif" style="width:85%; max-width:300px;>
 </p>
 <p align="center">
-<a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip"> <img class="button" src="https://user-images.githubusercontent.com/61367380/119500767-c8143680-bd85-11eb-802d-4c5b750c349a.png" width="450"> </a>
+<a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows/releases/latest/download/Blackeye-for-Windows.zip"> <img class="button" src="https://user-images.githubusercontent.com/61367380/119500767-c8143680-bd85-11eb-802d-4c5b750c349a.png" style="width: 85%; max-width: 450px;"> </a>
 </p>
 
 <h2 id="What-is-This">What is this?</h2>
 <p>This is a Phishing tool. Phishing is a type of hacking also called credential harvesting. It creates fake websites for victims to login which saves their login info which includes IP, User-Agent, Username and Password to a file in the computer running Blackeye. This tool has been there for <a href="https://www.linux.org/">Linux</a> and even <a href="https://www.android.com/">Android</a> via <a href="https://termux.com/">Termux</a>. I converted it to <a href="https://www.microsoft.com/en-in/windows">Windows</a>.</p>
 <h3 id="these-are-the-options-">These are the options:</h3>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61367380/119489210-166f0880-bd79-11eb-9e04-f5112ca3fcde.png" style="height:auto; width:100%">
+<img src="https://user-images.githubusercontent.com/61367380/119489210-166f0880-bd79-11eb-9e04-f5112ca3fcde.png" style="width:auto; max-width: 100%;">
 </p>
 
 <h2 id="legal-disclaimer-">Legal disclaimer:</h2>
 <p>Usage of BlackEye for attacking targets without prior mutual consent is illegal. It&#39;s the end user&#39;s responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program. Only use for educational purposes.</p>
 
 <h2 id="Support-Me">Support Me:</h2>
-<a href="https://paypal.me/HimDek?locale.x=en_GB" target="_blank"><img class="button" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" height="80px"></a>
+<a href="https://paypal.me/HimDek?locale.x=en_GB" target="_blank"><p align="center"><img class="button" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" height="80px"></p></a>
 
 <h2 id="how-to-use-">How to use:</h2>
 <ul>
