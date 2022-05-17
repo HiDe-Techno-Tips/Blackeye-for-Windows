@@ -18,7 +18,7 @@
 <p>Usage of BlackEye for attacking targets without prior mutual consent is illegal. It&#39;s the end user&#39;s responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program. Only use for educational purposes.</p>
 
 <h2 id="Support-Me">Support Me:</h2>
-<a href="https://paypal.me/HimDek?locale.x=en_GB" target="_blank"><p align="center"><img class="button" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" height="80px"></p></a>
+<a href="https://github.himdek.com/?tab=donate" target="_blank"><p align="center"><img class="button" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" height="80px"></p></a>
 
 <h2 id="how-to-use-">How to use:</h2>
 <ul>
