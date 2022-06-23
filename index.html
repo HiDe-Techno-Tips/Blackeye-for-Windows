@@ -13,7 +13,7 @@
 <div class="g-ytsubscribe" data-channelid="UCy3fBVKd0RMY05CgiiuGqSA" data-layout="" data-count="default"></div>
 </header>
 <script>
-fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/header.txt").then(function(response) {
+fetch("../header.txt").then(function(response) {
     	response.text().then(function(text) {
     		document.getElementById("header").innerHTML = text;
     	});
@@ -22,7 +22,7 @@ fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.githu
 
 <div id = "tabbar" class = "tab" style = "z-index:1"></div>
 <script>
-fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/tab.txt").then(function(response) {
+fetch("../tab.txt").then(function(response) {
     	response.text().then(function(text) {
     		document.getElementById("tabbar").innerHTML = text;
     	});
@@ -43,7 +43,7 @@ function Menu(icon) {
 	<span class="buttons">
 		<a href="https://github.com/HiDe-Techno-Tips/Blackeye-for-Windows">
 			<button class="icontext">
-				<img src="https://github.com/HiDe-Techno-Tips/HiDe-Techno-Tips.github.io/raw/main/assets/GitHub-Mark-Light-120px-plus.png" width="30px" style="margin-right: 10px;">
+				<img src="../assets/GitHub-Mark-Light-120px-plus.png" width="30px" style="margin-right: 10px;">
 				View Repository in Github
 			</button>
 		</a>
@@ -105,7 +105,7 @@ fetch("https://api.github.com/users/Hide-techno-tips/gists").then(res => res.jso
 
 <div id = "content"></div>
 <script>
-fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/Blackeye-for-Windows/main/README.md").then(function(response) {
+fetch("README.md").then(function(response) {
     	response.text().then(function(text) {
     		document.getElementById("content").innerHTML = text;
     	});
@@ -117,7 +117,7 @@ fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/Blackeye-for-Windows/m
 <div id = "footer"></div>
 </footer>
 <script>
-fetch("https://raw.githubusercontent.com/HiDe-Techno-Tips/hide-techno-tips.github.io/main/footer.txt").then(function(response) {
+fetch("../footer.txt").then(function(response) {
     	response.text().then(function(text) {
     		document.getElementById("footer").innerHTML = text;
     	});
